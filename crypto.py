@@ -3,6 +3,7 @@
 
 import ecdsa
 import hashlib
+import sha3 # pysha3
 import hmac
 import pbkdf2
 
@@ -30,6 +31,9 @@ def ripemd160(x):
 def hash160(x):
     '''RIPEMD-160 of SHA-256.'''
     return ripemd160(sha256(x))
+
+def keccak256(x):
+    return sha3.keccak_256( x ).digest()
 
 def hmac_sha512(x, y):
     return hmac.new(x, y, hashlib.sha512).digest()
