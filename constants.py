@@ -6,6 +6,7 @@ class Constants:
     
     XPRV_HEADER = 0x0488ade4
     XPUB_HEADER = 0x0488b21e
+    BIP32_HARDENED = 0x80000000
     
     # Bitcoin
     WIF_PREFIX = 0x80
